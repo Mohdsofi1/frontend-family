@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#box-m {
+  position: static;
+  display: block;
+  width: 85px;
+  height: 93.3px;
+  background: #181818;
+  z-index: 2;
+  margin-bottom: 2px;
+  transition: 1.5s;
+}
+#box-m:hover {
+  background: #0f0;
+  transition: 0s;
+}
+
+#h2:hover #h1 {
+  bottom: 90px;
+  visibility: visible;
+  z-index: 4;
+}
+
+#c2 {
+  border-radius: 6% 75% 0% 73% / 0% 70% 57% 76%;
+}
+
+#c1:hover #c2 {
+  bottom: 20px;
+  visibility: visible;
+  cursor: pointer;
+}
