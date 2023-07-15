@@ -12,6 +12,9 @@ const Start = () => {
   const [topPosition, setTopPosition] = useState(0);
   const [jwt, setJwt] = useLocalStorage("token", "");
   const navigate = useNavigate();
+  const handleLogOut = () => {
+    navigate("/");
+  };
   const handleNavigateToLogin = () => {
     navigate("/login");
   };
@@ -30,7 +33,7 @@ const Start = () => {
       })
       .catch(function (error) {
         // handle error
-        console.error(error);
+        console.info(error);
         // handleNavigateToLogin();
       })
       .finally(function () {
@@ -100,7 +103,10 @@ const Start = () => {
           How To Use Family Hierarchy
         </span>
       </div>
-      <button className="absolute top-[40px] left-[640px] h-[80px] w-[180px] rounded-[7px] shadow-shadow-1 font-[700] text-[18px] flex justify-center items-center bg-[#222] text-[#0f0] font-font1">
+      <button
+        onClick={handleLogOut}
+        className="absolute top-[40px] left-[640px] h-[80px] w-[180px] rounded-[7px] shadow-shadow-1 font-[700] text-[18px] flex justify-center items-center bg-[#222] text-[#0f0] font-font1"
+      >
         Log Out
       </button>
       {cards.map((card) => (
