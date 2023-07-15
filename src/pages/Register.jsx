@@ -5,6 +5,7 @@ import Icon from "react-icons-kit";
 import { eye } from "react-icons-kit/icomoon/eye";
 import { eyeBlocked } from "react-icons-kit/icomoon/eyeBlocked";
 import axios from "axios";
+import { HOST } from "../api";
 
 const Register = () => {
   const navigate = useNavigate();

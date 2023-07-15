@@ -4,6 +4,7 @@ import ImageUpload from "../components/ImageUpload";
 import { Link, useNavigate } from "react-router-dom";
 import useLocalStorage from "../../hook/useLocalStorage";
 import axios from "axios";
+import { HOST } from "../api";
 
 const Start = () => {
   const [cards, setCards] = useState([]);
@@ -20,7 +21,7 @@ const Start = () => {
 
     // run get api
     axios
-      .get("http://localhost:8888/private", {
+      .get(`${HOST}/private`, {
         headers: { Authorization: `Bearer ${jwt}` },
       })
       .then(function (response) {
@@ -30,7 +31,7 @@ const Start = () => {
       .catch(function (error) {
         // handle error
         console.error(error);
-        handleNavigateToLogin();
+        // handleNavigateToLogin();
       })
       .finally(function () {
         //always executed

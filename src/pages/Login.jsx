@@ -6,6 +6,7 @@ import { eye } from "react-icons-kit/icomoon/eye";
 import { eyeBlocked } from "react-icons-kit/icomoon/eyeBlocked";
 import axios from "axios";
 import useLocalStorage from "../../hook/useLocalStorage";
+import { HOST } from "../api";
 
 const Login = () => {
   const [isLoading, setLoading] = useState(false);
